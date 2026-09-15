@@ -1,7 +1,5 @@
 # Vayu-X — AI/ML Tropical Cyclone Intelligence System
 
-> **Smart India Hackathon 2026** · Problem Statement **26070**
-> **Team No.** 152 · **Team Name** Vayu-X
 
 An AI/ML system for **identification**, **classification**, and **prediction** of tropical
 cyclone patterns over the North Indian Ocean using **multi-source satellite data**.
