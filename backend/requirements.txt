@@ -21,9 +21,11 @@ passlib[bcrypt]==1.7.4
 # ---- HTTP client (to model + alert services) ----
 httpx==0.28.1
 
-# ---- Geospatial ----
+# ---- Geospatial / Image processing ----
 shapely==2.0.6
 geojson-pydantic==1.1.2
+pillow>=10.0.0
+
 
 # ---- Best-track replay source (IBTrACS) ----
 pandas==2.2.3
