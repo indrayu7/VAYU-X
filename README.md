@@ -538,11 +538,72 @@ Detailed plan: [`docs/roadmap.md`](docs/roadmap.md)
 | [`docs/alerting.md`](docs/alerting.md) | Alert grading, thresholds, escalation, channels |
 | [`docs/roadmap.md`](docs/roadmap.md) | Phase plan, milestones, ownership |
 
-## 12. License
+## 12. 🚧 Project Status — We Are Still Building!
+
+> **⚠️ Active Development Notice**
+>
+> Vayu-X is currently under active development as part of **Smart India Hackathon 2026**.
+> Many features are functional but the system is not yet production-ready. We are iterating
+> rapidly — expect frequent updates, new modules, and breaking changes as we push toward
+> a complete, fully integrated cyclone intelligence platform.
+
+### What's Working Right Now
+
+| Component | Status | Notes |
+|---|---|---|
+| 🧠 AI Model (Intensity Prediction) | ✅ Functional | Trained on IBTrACS, beats persistence at 24h+ |
+| 🗄️ Backend API (FastAPI :8000) | ✅ Running | Auth, REST routes, WebSocket scaffold |
+| 🌐 Frontend Dashboard (React :5173) | ✅ Running | Map view, charts, alert console UI |
+| 📡 Data Pipeline | 🔄 In Progress | ERA5 fetcher working; MOSDAC/INSAT blocked pending credentials |
+| 🚨 Alert System | 🔄 In Progress | Rule engine scaffolded; SMS/email dispatch pending |
+| 🔁 Real-Time Integration | ⬜ Planned (see below) | Active INSAT-3D feed, live WebSocket push |
+
+---
+
+## 13. 🔭 Future Enhancements
+
+We have an exciting roadmap planned. Here are the major upcoming capabilities we're building toward:
+
+### 📡 Real-Time Satellite Data Integration *(Top Priority)*
+> Currently the system works with archived/batch satellite data. Our next major milestone is connecting to **live data streams**:
+- 🛰️ **Live INSAT-3D / 3DR / 3DS ingestion** via MOSDAC API — half-hourly full-disk IR, WV, and VIS imagery fed directly into the detection pipeline
+- 🌊 **Real-time SCATSAT/ASCAT ocean surface wind** overlays
+- 🌧️ **GPM/IMERG precipitation** streamed every 30 minutes
+- 🔄 **Automated ETL scheduler** that continuously fetches, calibrates, tiles, and loads imagery into the feature store without human intervention
+- 📺 **Live WebSocket push** from backend to dashboard — intensity and track updates visible on the map within seconds of new satellite imagery arriving
+
+### 🤖 Advanced AI/ML Improvements
+- Upgrade from CNN classifier to a **Vision Transformer (ViT)** backbone for pattern recognition
+- Add an **ensemble forecasting layer** combining ConvLSTM outputs with NWP model guidance (GFS/ECMWF)
+- Introduce **Grad-CAM / attention visualizations** so analysts can see *why* the model assigned a particular intensity class
+- Train a dedicated **rapid intensification detector** (RI events: >35 kt in 24h) — the hardest problem in cyclone forecasting
+
+### 🚨 Alert System Expansion
+- **Geo-fenced alerts** for coastal districts — warnings reach the right authorities automatically based on predicted landfall corridor
+- Multi-channel dispatch: **SMS, Email, Push Notifications, Webhook** integrations with NDMA / State DM portals
+- Configurable thresholds per alert tier (Depression → Extremely Severe Cyclonic Storm → Super Cyclonic Storm)
+- Automated **alert escalation** and acknowledgement tracking
+
+### 🗺️ Dashboard Enhancements
+- **Animated satellite image playback** — scroll through the last 24h of INSAT frames on the map
+- **Cone of uncertainty** drawn dynamically from ensemble spread
+- **Spaghetti track plot** showing multiple model ensemble members
+- IMD-style **intensity colour-coded track** (Dvorak T-number scale)
+- Mobile-responsive UI for field responders
+
+### 🏗️ Infrastructure & MLOps
+- Full **MLflow experiment tracking** with model registry and versioning
+- **Automated retraining pipeline** triggered when new IBTrACS best-track data is released each season
+- Kubernetes-ready deployment manifests (currently Docker Compose)
+- Monitoring dashboards (Prometheus + Grafana) for data pipeline health and model drift
+
+---
+
+## 14. License
 
 MIT — see [`LICENSE`](LICENSE). Satellite data remains under the licence of its respective
 provider (ISRO/MOSDAC, IMD, NASA, ECMWF, NOAA); see `docs/data-sources.md`.
 
 ---
 
-<sub>Built for Smart India Hackathon 2026 · Problem Statement 26070 · Ministry of Earth Sciences · Team Vayu-X (152)</sub>
+<sub>🌀 Built with ❤️ for Smart India Hackathon 2026 · Problem Statement 26070 · Ministry of Earth Sciences · India Meteorological Department · Team Vayu-X (152) — <em>Still building, always improving.</em></sub>
