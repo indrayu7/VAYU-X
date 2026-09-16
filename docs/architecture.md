@@ -1,6 +1,5 @@
 # System Architecture — Vayu-X
 
-Problem Statement 26070 · Team 152 · Ministry of Earth Sciences / IMD
 
 ---
 
