@@ -191,11 +191,3 @@ Canonical JSON representations live in [`shared/schemas/`](../shared/schemas/).
 | False positive alert | Confidence threshold + dedup window + human override in the alert console |
 | Missed detection (false negative) | Ensemble of detection thresholds; low-confidence detections still surface to analysts as "review needed" |
 | Alert channel failure | Four independent channels; dispatch status tracked per channel with retry |
-
-## 7. Why this architecture wins on the evaluation criteria
-
-- **Accuracy** — multi-source fusion beats single-channel Dvorak; trained against IMD best track
-- **Timeliness** — fully automated 30-minute loop vs hours of manual analysis
-- **Objectivity** — removes analyst-to-analyst variance in Dvorak estimation
-- **Actionability** — output is not a number but a geofenced, graded, delivered warning
-- **Extensibility** — new satellites, new models, new alert channels all plug in without redesign
