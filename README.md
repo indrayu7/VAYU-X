@@ -505,16 +505,6 @@ Conventions: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
 Detailed plan: [`docs/roadmap.md`](docs/roadmap.md)
 
-## 10. Team Vayu-X — Team No. 152
-
-| Role | Member | Owns |
-|---|---|---|
-| Team Lead / ML | _TBD_ | Model architecture, training |
-| ML Engineer | _TBD_ | Data pipeline, feature engineering |
-| Backend | _TBD_ | API gateway, database, integration |
-| Frontend | _TBD_ | Dashboard, geospatial visualization |
-| Alerts / DevOps | _TBD_ | Alert system, Docker, deployment |
-| Research / Docs | _TBD_ | Domain research, evaluation, presentation |
 
 ## 11. Documentation index
 
@@ -593,6 +583,4 @@ We have an exciting roadmap planned. Here are the major upcoming capabilities we
 MIT — see [`LICENSE`](LICENSE). Satellite data remains under the licence of its respective
 provider (ISRO/MOSDAC, IMD, NASA, ECMWF, NOAA); see `docs/data-sources.md`.
 
----
 
-<sub>🌀 Built with ❤️ for Smart India Hackathon 2026 · Problem Statement 26070 · Ministry of Earth Sciences · India Meteorological Department · Team Vayu-X (152) — <em>Still building, always improving.</em></sub>
