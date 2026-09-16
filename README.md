@@ -4,15 +4,6 @@
 An AI/ML system for **identification**, **classification**, and **prediction** of tropical
 cyclone patterns over the North Indian Ocean using **multi-source satellite data**.
 
-| | |
-|---|---|
-| **Problem Statement ID** | 26070 |
-| **Organization** | Ministry of Earth Sciences (MoES) |
-| **Department** | India Meteorological Department (IMD) |
-| **Category** | Software |
-| **Theme** | Disaster Management |
-
----
 
 ## 1. Problem in one paragraph
 
